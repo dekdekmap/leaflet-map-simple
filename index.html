@@ -56,6 +56,13 @@
   }).addTo(map); // EDIT - insert or remove ".addTo(map)" before last semicolon to display by default
    controlLayers.addBaseLayer(terrain, 'Stamen Terrain basemap');
 
+    
+   var googleSat = L.tileLayer('http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}.png',{
+    maxZoom: 20,
+    subdomains:['mt0','mt1','mt2','mt3']
+    });
+     controlLayers.addBaseLayer(googleSat, 'Google Sat');
+    
   /* Display a blue point marker with pop-up text */
   // L.marker([41.77, -72.69]).addTo(map) // EDIT latitude, longitude to re-position marker
   //  .bindPopup("Insert pop-up text here"); // EDIT pop-up text message
